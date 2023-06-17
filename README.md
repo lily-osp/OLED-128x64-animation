@@ -1,35 +1,35 @@
 # Animation Display Code
 
-This code is an example of an animation display using an Arduino board and an SSD1306 OLED display. It demonstrates how to show a series of frames as a continuous animation on the display.
+This code serves as an example of how to create an animation display using an Arduino board and an SSD1306 OLED display. It demonstrates the process of showing a series of frames as a continuous animation on the display.
 
 ## Dependencies
 
-The code depends on the following libraries:
+The code relies on the following libraries:
 
-- Wire.h: This library is used for I2C communication with the SSD1306 display.
-- Adafruit_GFX.h: This library provides graphics functions for drawing on the display.
-- Adafruit_SSD1306.h: This library provides specific functions for controlling the SSD1306 OLED display.
+- Wire.h: This library facilitates I2C communication with the SSD1306 display.
+- Adafruit_GFX.h: It provides graphics functions for drawing on the display.
+- Adafruit_SSD1306.h: This library offers specific functions for controlling the SSD1306 OLED display.
 
-Make sure to install these libraries before running the code.
+Ensure that you have installed these libraries before executing the code.
 
 ## Hardware Setup
 
-To use this code, you need the following hardware components:
+To utilize this code, you will need the following hardware components:
 
 - Arduino board
 - SSD1306 OLED display
 
-Connect the SSD1306 display to the Arduino board using the I2C interface. Refer to the datasheet or the documentation of your specific display for the pin connections.
+Connect the SSD1306 display to the Arduino board using the I2C interface. Refer to the datasheet or documentation of your specific display for pin connection details.
 
 ## Code Explanation
 
-The code starts by defining the screen dimensions and creating an instance of the `Adafruit_SSD1306` class, which is used for controlling the display.
+The code begins by defining the screen dimensions and creating an instance of the `Adafruit_SSD1306` class, which is responsible for controlling the display.
 
 Next, a series of frames are defined as arrays of unsigned char data. Each frame represents a single animation frame and is stored in program memory (PROGMEM) to conserve RAM.
 
-In the `setup()` function, the code initializes the SSD1306 display and checks if it was successfully allocated. If the allocation fails, the code enters an infinite loop.
+In the `setup()` function, the code initializes the SSD1306 display and verifies if the allocation was successful. If the allocation fails, the code enters an infinite loop.
 
-In the `loop()` function, the animation frames are displayed in sequence on the OLED display. Each frame is drawn using the `drawBitmap()` function provided by the `Adafruit_SSD1306` library. After drawing the frame, the display is updated using the `display()` function, and a delay is introduced to control the animation speed.
+In the `loop()` function, the animation frames are displayed sequentially on the OLED display. Each frame is drawn using the `drawBitmap()` function provided by the `Adafruit_SSD1306` library. After drawing the frame, the display is updated using the `display()` function, and a delay is introduced to control the animation speed.
 
 The animation cycles through all the frames repeatedly, gradually decreasing the delay between frames until it reaches a minimum value of 50 milliseconds.
 
@@ -50,7 +50,7 @@ H --> C
 
 ## Usage
 
-To use this code, follow these steps:
+To utilize this code, follow these steps:
 
 1. Set up the Arduino board and connect the SSD1306 display.
 2. Install the required libraries (Wire, Adafruit_GFX, Adafruit_SSD1306) in your Arduino IDE.
@@ -64,8 +64,8 @@ Remember to refer to the documentation of your specific SSD1306 display for any 
 
 ## Troubleshooting
 
-- If the SSD1306 allocation fails during setup, make sure the display is properly connected to the Arduino board and that the correct I2C address is used in the `begin()` function call.
+- If the SSD1306 allocation fails during setup, ensure that the display is properly connected to the Arduino board and that the correct I2C address is used in the `begin()` function call.
 
-- If the animation is not displayed or appears distorted, check the connections between the Arduino and the SSD1306 display. Ensure that the pins are correctly wired and that the display is receiving power.
+- If the animation is not displayed or appears distorted, check the connections between the Arduino and the SSD1306 display. Verify that the pins are correctly wired and that the display is receiving power.
 
 - If you encounter any issues, refer to the documentation and examples provided with the libraries used in the code. Additionally, consult online forums and resources for troubleshooting specific problems related to your setup.
