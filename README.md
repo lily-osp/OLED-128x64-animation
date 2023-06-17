@@ -2,6 +2,9 @@
 
 This code serves as an example of how to create an animation display using an Arduino board and an SSD1306 OLED display. It demonstrates the process of showing a series of frames as a continuous animation on the display.
 
+translate:
+- [indonesian](https://github.com/lily-open-source/oled_i2c-128x64-animation/blob/main/README_id.md)
+
 ## Dependencies
 
 The code relies on the following libraries:
